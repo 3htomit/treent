@@ -1,14 +1,9 @@
-  <%= render 'components/navbar', context: :plants_index %>
-  <br>
-  <br>
-  <br>
-  <br>
-  <h1>Plants</h1>
-  <div class="main-container d-flex">
-    <div class="cards d-flex flex-wrap">
-      <% 21.times do |n| %>
-        <%= render 'components/card', n: n %>
-      <% end %>
-    </div>
-    <img id="map" src="https://en.mappy.com/front-services/map/44000-Nantes" alt="">
+<h1 class="mt-5">Plants</h1>
+<div class="main-container d-flex">
+  <div class="cards d-flex flex-wrap">
+    <% 21.times do |n| %>
+      <%= render 'components/card', n: n %>
+    <% end %>
   </div>
+  <img id="map" src="https://en.mappy.com/front-services/map/44000-Nantes" alt="">
+</div>
