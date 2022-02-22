@@ -63,12 +63,14 @@
   }
 }
 
-.navbar {
+.navbar-homepage {
   opacity: 0;
   transition: 1s background-color ease;
   background-color: transparent;
   position: fixed;
+
   justify-content: space-between;
+
   h2 {
     font-family: Lobster;
   }
@@ -78,6 +80,5 @@
   opacity: 1;
   background: white;
   justify-content: space-between;
-  width: 100%;
 
 }
