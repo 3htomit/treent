@@ -86,7 +86,7 @@ plant1 = Plant.new(
   Plante méditerranéenne : Non
   Développement : Peu traçant",
   day_price: 4.2,
-  user: User.all.sample
+  user: User.all.find(id=3)
 )
 file11 = URI.open('https://images.unsplash.com/photo-1532920161727-344adb090f7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant1.photos.attach(io: file11, filename: 'bamboo1.jpg', content_type: 'image/jpg')
@@ -120,7 +120,7 @@ plant2 = Plant.new(
   Exposition : Soleil,Mi-ombre
   Type de sol : Normal,Sec",
   day_price: 4.2,
-  user: User.all.sample
+  user: User.all.find(id=3)
 )
 file21 = URI.open('https://images.unsplash.com/photo-1551839094-d9fecfdd60f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant2.photos.attach(io: file21, filename: 'cypress1.jpg', content_type: 'image/jpg')
@@ -167,7 +167,7 @@ plant3 = Plant.new(
   Obtenteur : Adam
   Année de l'obtention : 1994",
   day_price: 2.8,
-  user: User.all.sample
+  user: User.all.find(id=3)
 )
 file31 = URI.open('https://images.unsplash.com/photo-1535846660354-f998ee0797e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant3.photos.attach(io: file31, filename: 'rose_bush1.jpg', content_type: 'image/jpg')
@@ -196,7 +196,7 @@ plant4 = Plant.new(
   Exposition : Soleil,Mi-ombre
   Type de sol : Frais",
   day_price: 8.8,
-  user: User.all.sample
+  user: User.all.find(id=4)
 )
 file41 = URI.open('https://images.unsplash.com/photo-1554067241-c7fade64cba7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fG1hZ25vbGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60')
 plant4.photos.attach(io: file41, filename: 'magnolia1.jpg', content_type: 'image/jpg')
@@ -214,7 +214,7 @@ plant5 = Plant.new(
   Truffaut informe :  Le kumquat peut être cultivé en appartement, en l'installant dans une pièce très lumineuse, idéalement une véranda non chauffée, avec une atmosphère assez humide (une brumisation du feuillage peut être utile). En été, un séjour à l'extérieur, sur une terrasse, un balcon, favorisera sa fructification. En hiver, l'arrosage doit être modéré.
   Plante méditerranéenne :Non",
   day_price: 3.3,
-  user: User.all.sample
+  user: User.all.find(id=4)
 )
 file51 = URI.open('https://images.unsplash.com/photo-1534329706378-bc7be642fc8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant5.photos.attach(io: file51, filename: 'kumquat1.jpg', content_type: 'image/jpg')
@@ -254,7 +254,7 @@ plant6 = Plant.new(
   Couleur de floraison : Blanche,Bleu
   Floraison parfumée : Non",
   day_price: 1.1,
-  user: User.all.sample
+  user: User.all.find(id=4)
 )
 file61 = URI.open('https://images.unsplash.com/photo-1524366035278-86bff25a9ff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzc2lmbG9yYSUyMGNhZXJ1bGVhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 plant6.photos.attach(io: file61, filename: 'plantphoto1.jpg', content_type: 'image/jpg')
@@ -294,7 +294,7 @@ plant7 = Plant.new(
   Couleur de floraison : Blanche
   Floraison parfumée : Non",
   day_price: 1.5,
-  user: User.all.sample
+  user: User.all.find(id=4)
 )
 file71 = URI.open('https://images.unsplash.com/photo-1594794741819-f3deb27a4a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant7.photos.attach(io: file71, filename: 'eucalyptus1.jpg', content_type: 'image/jpg')
@@ -313,7 +313,7 @@ plant8 = Plant.new(
   Truffaut informe : Cet arbre vigoureux résiste au gel jusqu'à -10 °C.
   Plante méditerranéenne : Non",
   day_price: 12.9,
-  user: User.all.sample
+  user: User.all.find(id=5)
 )
 file81 = URI.open('https://images.unsplash.com/photo-1544475925-9199e8ed85ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant8.photos.attach(io: file81, filename: 'olive_tree1.jpg', content_type: 'image/jpg')
@@ -351,7 +351,7 @@ plant9 = Plant.new(
   Période de floraison : de Juin à Septembre
   Floraison parfumée : Non",
   day_price: 4.7,
-  user: User.all.sample
+  user: User.all.find(id=5)
 )
 file91 = URI.open('https://images.unsplash.com/photo-1565025968207-cf3123cd1e8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant9.photos.attach(io: file91, filename: 'palm_tree1.jpg', content_type: 'image/jpg')
@@ -392,7 +392,7 @@ plant10 = Plant.new(
   Floraison parfumée : Oui
   Type de parfum : Floral",
   day_price: 3.2,
-  user: User.all.sample
+  user: User.all.find(id=5)
 )
 file101 = URI.open('https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant10.photos.attach(io: file101, filename: 'lavender1.jpg', content_type: 'image/jpg')
