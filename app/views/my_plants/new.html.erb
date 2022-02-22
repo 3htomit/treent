@@ -1,0 +1,9 @@
+<div class = "d-flex container">
+  <%= simple_form_for ([ @user, @plant ]) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :day_price %>
+    <%= f.association :user %>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <% end %>
+</div>
