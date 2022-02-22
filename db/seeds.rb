@@ -1,3 +1,6 @@
+
+require "open-uri"
+
 i = 1
 puts "begining to create Users and plants"
 
@@ -114,7 +117,6 @@ plant = Plant.new(
   day_price: 4,
   user: User.third
 )
-
 file = URI.open('https://cdn.shopify.com/s/files/1/0004/2654/1108/products/LIVRAISONKOKEDAMAFICUSTRESSE_1800x1800.jpg?v=1637323532')
 plant.photos.attach(io: file, filename: "Bonsaï", content_type: 'image/png')
 
@@ -282,56 +284,19 @@ plant = Plant.new(
   On dénombre une cinquantaine d'espèces et plus de 5000 hybrides, dont la généalogie très complexe peut remonter sur plus de 10 générations. Ces hybrides sont beaucoup plus faciles à cultiver en appartement. Les espèces réussiront mieux en serre, notamment Phalaenopsis amabilis, à fleurs blanches et au labelle jaune et rose marqué de rouge ; P. lueddemanniana, à fleurs cireuses, blanches et labelle rose pourpre ; P. violacea, petit, parfumé, blanc, jaune et violet-pourpre, une merveille de délicatesse
   Truffaut conseille : Les hampes florales des grands Phalaenopsis ont tendance à plier sous le poids des fleurs. Plantez un tuteur au fond du pot et attachez le à plusieurs endroits sur la hampe
   Truffaut informe : Attention, variétés et coloris peuvent changer selon disponibilités et arrivages.
-  Plante méditerranéenne : Non
-  Port de la plante : Erigé
-  Feuillage : Persistant
-  Couleur du feuillage : Vert
-  Feuillage décoratif : Non
-  Hauteur à maturité (cm) : 40
-  Dimension moyenne à maturité (cm) : H 40 cm
-  Lieu de vie : Plante d'intérieur
-  Hygrométrie : Moiteur - 60% d'humidité
-  Luminosité : Lumière tamisée
-  Température mini-maxi recommandée : 14°C 24°C
-  Commentaire environnement de la plante : Des variations de température entre le jour et la nuit et un arrêt végétatif bien parqué après la floraison sont indispensable pour induire de nouvellles fleurs. Lorsque la plante porte des boutons, la température ne doit pas descendre en dessous de 15°C.
-  Période de floraison : de Janvier à Décembre
-  Forme de la fleur : En coupe
-  Floraison parfumée : Non
-  Carte d'identité
-  Nom commun : Phaléno
-  Genre de la plante : Phalaenopsis
-  Famille : Orchidacées
-  Mode de vie : Vivace
-  Origine de l'espèce : Asie du Sud Est, Inde, Philippines et nord de l'Australie dans les forêts humides et denses, à base altitude (de 200 à 400)
-  Entretien
-  Périodicité d'arrosage
-  Février à septembre 2 fois par semaine,Octobre à janvier 1 fois par semaine
-  Commentaire arrosage
-  De préférence le matin, tous les 2 ou 3 jours en été, tous les 8 à 10 jours en hiver. Utilisez de l'eau plutôt tiede et non calcaire
-  Terreau conseillé
-  Mélange orchidée
-  Engrais conseillé
-  Engrais orchidées
-  Période d'apport engrais
-  De Mars à Septembre
-  Fréquence de rempotage
-  Tous les 2 à 3 ans
-  Période de rempotage
-  de Avril à Juin
-  Ennemis maladies et remèdes
-  Une attaque bactérienne d'Erwinia cypripedii provoque la pourriture molle. Divers champignons tachent les feuilles ou les fleurs (surtout le Botrytis). Traitez préventivement sans utiliser de produits en bombe qui sont mal tolérés. Utilisez toujours des outils très propres et assurez une bonne aération (sans courant d'air).
-  Conditionnement
-  Conditionnement : Pot",
-  day_price: 5.69,
+  Plante méditerranéenne : Non",
+  day_price: 2.36,
   user: User.second
 )
 
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThL5NXekU7Xbn-yEQkJRkOSBJQT462HEs0KQ&usqp=CAU')
-plant.photos.attach(io: file, filename: "Azalée d'intérieur", content_type: 'image/png')
 
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSii1-B1eglyQEASe93yqG-Fj9mSkl9MyFJ3Q&usqp=CAU')
-plant.photos.attach(io: file, filename: "Azalée and cat", content_type: 'image/png')
 
-plant.save
-puts "#{i} plant create and save"
-i += 1
+  file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThL5NXekU7Xbn-yEQkJRkOSBJQT462HEs0KQ&usqp=CAU')
+  plant.photos.attach(io: file, filename: "Azalée d'intérieur", content_type: 'image/png')
+
+  file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSii1-B1eglyQEASe93yqG-Fj9mSkl9MyFJ3Q&usqp=CAU')
+  plant.photos.attach(io: file, filename: "Azalée and cat", content_type: 'image/png')
+
+  plant.save
+  puts "#{i} plant create and save"
+  i += 1
