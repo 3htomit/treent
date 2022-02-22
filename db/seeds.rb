@@ -1,4 +1,3 @@
-
 require "open-uri"
 
 i = 1
