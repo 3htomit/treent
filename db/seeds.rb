@@ -89,9 +89,7 @@ user.avatar.attach(io: file, filename: "laure", content_type: 'image/png')
 
 user.save
 puts "#{i} user create and save"
-i += 1
 
-user = User.all
 
 i = 1
 plant = Plant.new(
@@ -114,7 +112,7 @@ plant = Plant.new(
   Autres caractéristiques
   Utilisable en agriculture biologique (UAB) : Non",
   day_price: 4,
-  user_id: user.sample
+  user: User.third
 )
 
 file = URI.open('https://cdn.shopify.com/s/files/1/0004/2654/1108/products/LIVRAISONKOKEDAMAFICUSTRESSE_1800x1800.jpg?v=1637323532')
@@ -125,7 +123,6 @@ plant.photos.attach(io: file, filename: "bonsaï vintage", content_type: 'image/
 
 file = URI.open('https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJvbnNhJUMzJUFGfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=60')
 plant.photos.attach(io: file, filename: "bonzaï tree", content_type: 'image/png')
-
 
 plant.save
 puts "#{i} plant create and save"
@@ -143,7 +140,7 @@ plant = Plant.new(
   Carte d'identité
   Espèce : Elegans",
   day_price: 10,
-  user_id: user.sample
+  user: User.first
 )
 
 file = URI.open('https://images.unsplash.com/photo-1466298356323-f84bed7b3475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8Mjk3MjI0fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=60')
@@ -184,7 +181,7 @@ plant = Plant.new(
   Mode de vie : Vivace
   Origine de l'espèce : Afrique du Sud",
   day_price: 1.3,
-  user_id: user.sample
+  user: User.first
 )
 
 file = URI.open('https://images.unsplash.com/photo-1639627369574-28d7fde9fe68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGF3b3J0aGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=60')
@@ -255,7 +252,7 @@ plant = Plant.new(
   Ennemis maladies et remèdes
   Une attaque bactérienne d'Erwinia cypripedii provoque la pourriture molle. Divers champignons tachent les feuilles ou les fleurs (surtout le Botrytis). Traitez préventivement sans utiliser de produits en bombe qui sont mal tolérés. Utilisez toujours des outils très propres et assurez une bonne aération (sans courant d'air).",
   day_price: 3.14,
-  user_id: user.sample
+  user: User.second
 )
 
 file = URI.open('https://images.unsplash.com/photo-1638047439096-55a186f4c2f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG9yY2hpZCVDMyVBOWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&h=500&q=60')
@@ -326,7 +323,7 @@ plant = Plant.new(
   Conditionnement
   Conditionnement : Pot",
   day_price: 5.69,
-  user_id: user.sample
+  user: User.second
 )
 
 file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThL5NXekU7Xbn-yEQkJRkOSBJQT462HEs0KQ&usqp=CAU')
