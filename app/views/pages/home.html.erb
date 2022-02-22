@@ -1,2 +1,53 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-controller="navbar" data-action="scroll@window->navbar#showNavbar">
+  <div class="container-fluid">
+    <h2>Treend</h2>
+    <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpaperaccess.com/full/626933.jpg);">
+  <div class="container">
+    <h1>Treent</h1>
+    <a class="btn btn-ghost" href="#">Hire A Plant !</a>
+  </div>
+</div>
+
+<div class="info_container d-flex">
+  <div class="info_card">
+    <%= image_tag("tree1.png") %>
+    <p>Besoin de plantes pour décorer <br> votre intérieur ?</p>
+  </div>
+  <div class="info_card">
+    <%= image_tag("tree2.png") %>
+    <p>Envie de partager votre collection à d'autres <br> treent-husiatstes ?</p>
+  </div>
+  <div class="info_card">
+    <%= image_tag("tree3.png") %>
+    <p>Un evenement en préparation ? <br> On vous couvre !</p>
+  </div>
+</div>
+
+<div class="suggestions_container">
+  <h1>Les plantes du moment 🍁</h1>
+</div>
