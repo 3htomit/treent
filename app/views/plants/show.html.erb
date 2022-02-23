@@ -1,0 +1,45 @@
+<div class="top-margin main-container d-flex">
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide bg-secondary" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="<%= cl_image_path @plant.photos[0].key, height: 500, crop: :fill %>" class="d-block me-auto ms-auto" alt="Plant photo 1">
+        </div>
+        <div class="carousel-item">
+          <img src="<%= cl_image_path @plant.photos[1].key, height: 500, crop: :fill %>" class="d-block me-auto ms-auto" alt="Plant photo 2">
+        </div>
+        <div class="carousel-item">
+          <img src="<%= cl_image_path @plant.photos[2].key, height: 500, crop: :fill %>" class="d-block me-auto ms-auto" alt="Plant photo 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container text-start">
+      <h1><%= @plant.name %></h1>
+      <p><%= simple_format(@plant.description) %></p>
+    </div>
+  </div>
+
+  <div class="container d-flex flex-column align-items-center justify-content-between p-5" id="booking">
+    <h2>Recap</h2>
+    <%= image_tag "dates_picker.png", width: 300 %>
+    <div class="container border border-primary pt-2 bg-light">
+      <h5><strong><%= (@plant.day_price * 7).round(2) %> €</strong></h5>
+    </div>
+    <%= link_to "Book plant", "#", class: "btn btn-primary" %>
+    <%# <a href="#" class="btn btn-primary">Book plant</a> %>
+  </div>
+</div>

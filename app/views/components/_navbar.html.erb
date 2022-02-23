@@ -1,9 +1,7 @@
 <% if context == :homepage %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-homepage" data-controller="navbar" data-action="scroll@window->navbar#showNavbar">
-<% elsif context == :sticky %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-homepage" data-controller="navbar" data-action="scroll@window->navbar#showNavbar">
 <% else %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky">
 <% end %>
   <%= render 'components/navbar/inner' %>
 </div>

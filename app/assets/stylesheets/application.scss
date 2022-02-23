@@ -11,10 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/form";
+@import "components/booking";
+@import "components/top_margin";
+@import "components/plant_carousel";
 
 a {
   text-decoration: none;
-  color: black;
+  color: darkslategrey;
 }
 
 a:hover {
