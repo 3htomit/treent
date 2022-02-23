@@ -3,11 +3,17 @@
   background-position: center;
   padding: 150px 0;
   height: 600px;
-  // justify-content: center;
-}
-
-.container {
   text-align: center;
+  justify-content: center;
+  width: 100%;
+  .title {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 80px;
+    font-weight: bold;
+    font-family: Lobster;
+  }
 }
 
 .banner h1 {
@@ -22,12 +28,16 @@
 .btn-ghost {
   color: white;
   border: 2px solid white;
-  padding: 8px 24px;
+  padding: 10px 24px;
   border-radius: 50px;
   font-weight: bolder;
   opacity: 0.9;
   transition: opacity 0.3s ease;
   margin-top: 100px;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  font-size: larger;
 }
 
 .info_container {
@@ -71,9 +81,6 @@
 
   justify-content: space-between;
 
-  h2 {
-    // font-family: Lobster;
-  }
 }
 
 .navbar-show {
