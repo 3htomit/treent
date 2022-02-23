@@ -1,11 +1,8 @@
 
-.container {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 5rem 1fr;
-}
-.tab__conatiner {
+
+.tab__container {
   display: flex;
+
 }
 
 .tab {
@@ -36,4 +33,28 @@
 
 .tab:hover {
   background-color: #777;
+}
+
+.pending {
+  width: 90%;
+  border: solid black 1px;
+  height: 400px;
+  text-align: center;
+}
+
+
+.btn {
+  border: 1px solid black;
+  width: 800px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#bookings {
+  text-align: center;
+  margin: 30px;
+}
+
+.booking-list {
+  list-style: none;
 }
