@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
-  def show
+
+  def index
     @bookings = Booking.all
   end
 
@@ -12,10 +13,10 @@ class BookingsController < ApplicationController
   end
 
   def accept
-
+    @status = true
   end
 
-  def status
-    
+  def status?
+    @status
   end
 end

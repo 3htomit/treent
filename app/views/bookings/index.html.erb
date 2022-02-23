@@ -1,0 +1,28 @@
+<%#
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Bookings</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">My Plants</button> %>
+
+<div class="container" data-controller="bookings">
+  <div class="tab__conatiner">
+    <button class="bookings tab">bookings</button>
+    <button class="plants tab">My Plants</button>
+  </div>
+
+  <div id="bookings" class="tab_content active">
+    <h2>BOOKINGS</h2>
+    <h4>Pending</h4>
+    <div class="pending">
+    </div>
+
+    <h4>Ongoing</h4>
+    <div class="ongoing">
+
+    </div>
+  </div>
+
+  <div id="my_plants" class="tab_content">
+    <h3>My Plants</h3>
+    <p>Some news this fine day!</p>
+  </div>
+</div>

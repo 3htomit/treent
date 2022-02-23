@@ -4,6 +4,8 @@
   padding: 150px 0;
   height: 600px;
   text-align: center;
+  justify-content: center;
+  width: 100%;
   .title {
     margin: 0;
     color: white;
@@ -20,12 +22,16 @@
 .btn-ghost {
   color: white;
   border: 2px solid white;
-  padding: 8px 24px;
+  padding: 10px 24px;
   border-radius: 50px;
   font-weight: bolder;
   opacity: 0.9;
   transition: opacity 0.3s ease;
   margin-top: 100px;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  font-size: larger;
 }
 
 .info_container {
@@ -68,10 +74,7 @@
   position: fixed;
 
   justify-content: space-between;
-
-  h2 {
-    font-family: Lobster;
-  }
+ font-family: Lobster;
 }
 
 .navbar-show {

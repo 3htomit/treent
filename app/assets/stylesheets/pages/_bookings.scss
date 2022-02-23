@@ -1,0 +1,39 @@
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+}
+.tab__conatiner {
+  display: flex;
+}
+
+.tab {
+  background-color: #555;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+  text-transform: uppercase;
+}
+.tab_content {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.tab__content h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.active {
+  display: block;
+  }
+
+.tab:hover {
+  background-color: #777;
+}
