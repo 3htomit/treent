@@ -9,6 +9,9 @@ class MyPlantsController < ApplicationController
     @user = current_user
     params[:plant][:user_id] = @user.id # a vérif
     @my_plant = Plant.new(plant_params)
+
+    @my_plant.address = @user.address
+
     if @my_plant.save
       redirect_to plants_path
     else
