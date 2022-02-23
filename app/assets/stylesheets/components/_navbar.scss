@@ -1,3 +1,12 @@
+#navbar {
+  a {
+    color: black;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
