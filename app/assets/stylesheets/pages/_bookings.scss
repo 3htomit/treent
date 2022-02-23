@@ -45,16 +45,26 @@
 
 .btn {
   border: 1px solid black;
-  width: 800px;
+  width: 90%;
   font-size: 20px;
   border-radius: 5px;
+  background-color: white;
 }
 
 #bookings {
   text-align: center;
-  margin: 30px;
+  // margin: px;
 }
 
 .booking-list {
   list-style: none;
+  align-items: center;
+}
+
+body {
+  background-color: #F1F7E7;
+}
+
+ul {
+  padding: 0;
 }
