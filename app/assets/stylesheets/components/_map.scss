@@ -1,5 +1,14 @@
-#map {
+// #map {
+//   width: 800px;
+//   height: 450px;
+//   position: sticky;
+//   top:0;
+// }
+
+.mapboxgl-map {
+  width: 450px;
   height: 450px;
   position: sticky;
   top:0;
+  margin-left: 0;
 }
