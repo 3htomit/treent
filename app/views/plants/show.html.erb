@@ -1,4 +1,8 @@
-<div class="top-margin main-container d-flex">
+<div class="top-margin container">
+  <%= link_to "Back to plants", plants_path %>
+</div>
+
+<div class="main-container d-flex">
   <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide bg-secondary" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -37,7 +41,7 @@
     <h2>Recap</h2>
     <%= image_tag "dates_picker.png", width: 300 %>
     <div class="container border border-primary pt-2 bg-light">
-      <h5><strong><%= (@plant.day_price * 7).round(2) %> €</strong></h5>
+      <h5 class="text-center"><strong><%= (@plant.day_price * 7).round(2) %> €</strong></h5>
     </div>
     <%= link_to "Book plant", "#", class: "btn btn-primary" %>
     <%# <a href="#" class="btn btn-primary">Book plant</a> %>
