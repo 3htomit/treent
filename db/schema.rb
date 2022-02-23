@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2022_02_23_134823) do
     t.bigint "plant_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "status", default: false
     t.index ["plant_id"], name: "index_bookings_on_plant_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
