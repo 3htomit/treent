@@ -1,12 +1,16 @@
+#navbar {
+  a {
+    color: black;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
   width: 100%;
-}
-
-h2 {
-  font-family: 'Lobster', cursive;
-  color: black;
 }
 
 .navbar-lewagon .navbar-collapse {
