@@ -6,10 +6,11 @@
     <% end %>
   </div>
   <div class = "flex-column">
-  <img id="map" src="https://en.mappy.com/front-services/map/44000-Nantes" alt="">
 
   <% if user_signed_in?%>
-    <div class = "mt-3 btn btn-primary"><%= link_to "New Plant", new_my_plant_path(current_user) %></div>
+    <div class = "mb-4 btn btn-secondary"><%= link_to "New Plant", new_my_plant_path(current_user) %></div>
   <%end%>
+
+  <img id="map" src="https://en.mappy.com/front-services/map/44000-Nantes" alt="">
   </div>
 </div>
