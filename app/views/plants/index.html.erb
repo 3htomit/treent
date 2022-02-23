@@ -1,8 +1,8 @@
-<h1 class="mt-5">Plants</h1>
+<h1 class="title-plants-index">Plants</h1>
 <div class="main-container d-flex">
   <div class="cards d-flex flex-wrap">
-    <% 21.times do |n| %>
-      <%= render 'components/card', n: n %>
+    <% @plants.each do |plant| %>
+      <%= render 'components/card', plant: plant %>
     <% end %>
   </div>
   <img id="map" src="https://en.mappy.com/front-services/map/44000-Nantes" alt="">
