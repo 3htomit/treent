@@ -1,0 +1,58 @@
+<%#
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Bookings</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">My Plants</button> %>
+
+<div data-controller="bookings">
+  <div class="tab__container">
+    <button class="bookings tab">bookings</button>
+    <button class="plants tab">My Plants</button>
+  </div>
+
+  <div id="bookings" class="tab_content active">
+
+      <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
+        Pending Bookings
+      </button>
+      <div class="collapse" id="collapsePending">
+        <ul class="booking-list">
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+        </ul>
+      </div>
+
+
+      <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOngoing" aria-expanded="false" aria-controls="collapseExample">
+        Ongoing
+      </button>
+      <div class="collapse" id="collapseOngoing">
+        <ul class="booking-list">
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+        </ul>
+      </div>
+
+      <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory" aria-expanded="false" aria-controls="collapseExample">
+        History
+      </button>
+      <div class="collapse" id="collapseHistory">
+        <ul class="booking-list">
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+          <li><%= render '/components/booking_exemple'  %></li>
+        </ul>
+      </div>
+  </div>
+
+  <div id="my_plants" class="tab_content plant-container">
+
+  </div>
+</div>

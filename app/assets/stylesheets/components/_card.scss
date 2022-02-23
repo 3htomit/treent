@@ -2,17 +2,39 @@
   align-self: center;
   justify-self: center;
   border-radius: 5px;
-  margin: 0 15px 15px 0;
+  margin: 0 15px 20px 0;
   width: 250px;
-  box-shadow: 2px 2px 2px lightgray;
+  box-shadow: 1px 1px 1px lightgray;
+  height: 400px ;
+  h3 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
 }
 
-h3 {
+.p-plants-index {
+  position: absolute;
+  bottom: 1px;
   color: #0B4619;
   font-family: 'Quicksand', sans-serif;
 }
 
-p {
+.card-title-plants-index {
   color: #0B4619;
   font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.border-photo {
+  border-radius: 5px 5px 0 0;
 }
