@@ -1,10 +1,19 @@
 <div class = "d-flex container justify-content-center mt-5 pt-5">
   <%= simple_form_for @my_plant, url: my_plants_path do |f| %>
-    <div class = "input"><%= f.input :name %></div>
-    <div class = "input"><%= f.input :description %></div>
-    <div class = "input"><%= f.input :day_price %></div>
+    <div class = "input">
+      <%= f.input :name,
+                  required: true %>
+    </div>
+    <div class = "input">
+      <%= f.input :description,
+                  required: true %>
+    </div>
+    <div class = "input">
+      <%= f.input :day_price,
+                  required: true %>
+    </div>
     <!-- rajouter la photo et un message d'erreur si possible -->
-    <!-- <%= f.input :photo, as: :file %> -->
+    <%= f.input :photo, as: :file %>
     <%= f.submit "new plant", class: "btn btn-primary" %>
   <% end %>
 </div>

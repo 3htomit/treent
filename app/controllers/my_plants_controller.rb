@@ -1,4 +1,5 @@
 class MyPlantsController < ApplicationController
+
   def new
     @my_plant = Plant.new
   end
