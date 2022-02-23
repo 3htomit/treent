@@ -1,7 +1,8 @@
 require "open-uri"
 
 ## CAMILLE
-
+Plant.destroy_all
+User.destroy_all
 i = 1
 puts "begining to create Users and plants"
 
@@ -116,7 +117,8 @@ plant = Plant.new(
   Autres caractéristiques
   Utilisable en agriculture biologique (UAB) : Non",
   day_price: 4,
-  user: User.third
+  user: User.third,
+  address: "Nantes"
 )
 file = URI.open('https://cdn.shopify.com/s/files/1/0004/2654/1108/products/LIVRAISONKOKEDAMAFICUSTRESSE_1800x1800.jpg?v=1637323532')
 plant.photos.attach(io: file, filename: "Bonsaï", content_type: 'image/png')
@@ -384,7 +386,8 @@ plant1 = Plant.new(
   <strong>Plante méditerranéenne :</strong> Non
   <strong>Développement :</strong> Peu traçant",
   day_price: 4.2,
-  user: User.all.find(id=3)
+  user_id: user3.id,
+  address: "Nantes"
 )
 file11 = URI.open('https://images.unsplash.com/photo-1532920161727-344adb090f7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant1.photos.attach(io: file11, filename: 'bamboo1.jpg', content_type: 'image/jpg')
@@ -421,7 +424,7 @@ plant2 = Plant.new(
   <strong>Exposition :</strong> Soleil,Mi-ombre
   <strong>Type de sol :</strong> Normal, Sec",
   day_price: 4.2,
-  user: User.all.find(id=3)
+  user_id: user3.id,
 )
 file21 = URI.open('https://images.unsplash.com/photo-1551839094-d9fecfdd60f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant2.photos.attach(io: file21, filename: 'cypress1.jpg', content_type: 'image/jpg')
@@ -471,7 +474,7 @@ plant3 = Plant.new(
   <strong>Obtenteur :</strong> Adam
   <strong>Année de l'obtention :</strong> 1994",
   day_price: 2.8,
-  user: User.all.find(id=3)
+  user_id: user3.id,
 )
 file31 = URI.open('https://images.unsplash.com/photo-1535846660354-f998ee0797e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant3.photos.attach(io: file31, filename: 'rose_bush1.jpg', content_type: 'image/jpg')
@@ -502,7 +505,7 @@ plant4 = Plant.new(
   <strong>Exposition :</strong> Soleil, Mi-ombre
   <strong>Type de sol :</strong> Frais",
   day_price: 8.8,
-  user: User.all.find(id=4)
+  user_id: user3.id,
 )
 file41 = URI.open('https://images.unsplash.com/photo-1554067241-c7fade64cba7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fG1hZ25vbGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60')
 plant4.photos.attach(io: file41, filename: 'magnolia1.jpg', content_type: 'image/jpg')
@@ -522,7 +525,7 @@ plant5 = Plant.new(
   \n
   <strong>Plante méditerranéenne :</strong> Non",
   day_price: 3.3,
-  user: User.all.find(id=4)
+  user_id: user3.id,
 )
 file51 = URI.open('https://images.unsplash.com/photo-1534329706378-bc7be642fc8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant5.photos.attach(io: file51, filename: 'kumquat1.jpg', content_type: 'image/jpg')
@@ -565,7 +568,7 @@ plant6 = Plant.new(
   <strong>Couleur de floraison :</strong> Blanche, Bleu
   <strong>Floraison parfumée :</strong> Non",
   day_price: 1.1,
-  user: User.all.find(id=4)
+  user_id: user3.id,
 )
 file61 = URI.open('https://images.unsplash.com/photo-1524366035278-86bff25a9ff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzc2lmbG9yYSUyMGNhZXJ1bGVhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 plant6.photos.attach(io: file61, filename: 'plantphoto1.jpg', content_type: 'image/jpg')
@@ -608,7 +611,7 @@ plant7 = Plant.new(
   <strong>Couleur de floraison :</strong> Blanche
   <strong>Floraison parfumée :</strong> Non",
   day_price: 1.5,
-  user: User.all.find(id=4)
+  user_id: user3.id,
 )
 file71 = URI.open('https://images.unsplash.com/photo-1594794741819-f3deb27a4a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant7.photos.attach(io: file71, filename: 'eucalyptus1.jpg', content_type: 'image/jpg')
@@ -630,7 +633,7 @@ plant8 = Plant.new(
   \n
   <strong>Plante méditerranéenne :</strong> Non",
   day_price: 12.9,
-  user: User.all.find(id=5)
+  user_id: user3.id,
 )
 file81 = URI.open('https://images.unsplash.com/photo-1544475925-9199e8ed85ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant8.photos.attach(io: file81, filename: 'olive_tree1.jpg', content_type: 'image/jpg')
@@ -671,7 +674,7 @@ plant9 = Plant.new(
   <strong>Période de floraison :</strong> de Juin à Septembre
   <strong>Floraison parfumée :</strong> Non",
   day_price: 4.7,
-  user: User.all.find(id=5)
+  user_id: user3.id,
 )
 file91 = URI.open('https://images.unsplash.com/photo-1565025968207-cf3123cd1e8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant9.photos.attach(io: file91, filename: 'palm_tree1.jpg', content_type: 'image/jpg')
@@ -715,7 +718,7 @@ plant10 = Plant.new(
   <strong>Floraison parfumée :</strong> Oui
   <strong>Type de parfum :</strong> Floral",
   day_price: 3.2,
-  user: User.all.find(id=5)
+  user_id: user3.id,
 )
 file101 = URI.open('https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant10.photos.attach(io: file101, filename: 'lavender1.jpg', content_type: 'image/jpg')
