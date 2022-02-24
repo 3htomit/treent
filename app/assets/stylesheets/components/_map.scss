@@ -5,13 +5,31 @@
   top: 130px;
   margin-top: 16px;
   margin-right: 16px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px lightgray;
 }
 
 .mapboxgl-popup {
-  max-width: 200px;
+  height: 100px;
+  width: 150px;
 }
 
 .mapboxgl-popup-content {
   color: #0B4619;
   font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 0 0 white;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+#mapbox-address {
+  position: absolute;
+  left: 3px;
+  bottom: 1px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
 }
