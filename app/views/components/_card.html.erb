@@ -1,9 +1,9 @@
 <%= link_to plant_path(plant.id) do %>
   <div class="card" >
     <!--si PBM photos = NILclass décomenter le ByPass-->
-    <%# if plant.photos.attached? %>
+    <% if plant.photos.attached? %>
       <%= cl_image_tag plant.photos.first.key, height: 270, width: 249, crop: :fill, class: "border-photo" %>
-    <%# end %>
+    <% end %>
     <div class="card-body">
       <h3 class="card-title-plants-index"><%= plant.name %></h3>
       <p class="p-plants-index"><%= plant.day_price %>€ / day</p>
