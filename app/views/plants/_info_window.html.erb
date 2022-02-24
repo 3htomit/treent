@@ -1,2 +1,3 @@
-<h2><%= plant.name %></h2>
-<p><%= plant.address %></p>
+<div class="mapboxgl-popup-content" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path plant.photos.first.key, height: 100, crop: :fill %>')">
+  <p id="mapbox-address"><%= plant.name %></p>
+</div>
