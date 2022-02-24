@@ -1,6 +1,7 @@
 require "open-uri"
 
 ## CAMILLE
+Booking.destroy_all
 Plant.destroy_all
 User.destroy_all
 i = 1
