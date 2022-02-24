@@ -16,11 +16,30 @@
       </button>
       <div class="collapse" id="collapsePending">
         <ul class="booking-list">
-          <li><%= render '/components/booking_exemple'  %></li>
-          <li><%= render '/components/booking_exemple'  %></li>
-          <li><%= render '/components/booking_exemple'  %></li>
-          <li><%= render '/components/booking_exemple'  %></li>
-          <li><%= render '/components/booking_exemple'  %></li>
+          <% current_user.bookings.each do |booking|%>
+            <li>
+
+              <div class=" d-flex justify-content-between card-product">
+                <div class="card-image d-flex flex-row ">
+                  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+                  <div class="card-product-infos">
+                    <h2>Product name</h2>
+                    <p>Product description with <strong>relevant info</strong> only.</p>
+                  </div>
+                </div>
+
+              <!-- if @status == true (du bookings controller) afficher pastille vert-->
+                <% if booking.status == true %>
+                  <strong><%= booking.status %></strong>
+                    <%= link_to "🟢", accept_path(booking), method: :patch, class: "reserved"%>
+                <% else %>
+                  <strong><%= booking.status %></strong>
+                    <%= link_to "🔴", accept_path(booking), method: :patch, class: "notreserved"%>
+                <%end%>
+                <%= link_to "🗑️", decline_path(booking), method: :patch, class: "delete"%>
+              </div>
+            </li>
+          <% end %>
         </ul>
       </div>
 

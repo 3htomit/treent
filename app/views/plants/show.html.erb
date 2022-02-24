@@ -49,7 +49,10 @@
     <div class="container border border-primary pt-2 bg-light">
       <h5 class="text-center"><strong><%= (@plant.day_price * 7).round(2) %> €</strong></h5>
     </div>
-    <%= link_to "Book plant", "#", class: "btn btn-primary" %>
+    <!-- data controller sur le bouton booking si j'ai besoin de l'info-->
+    <%# <div data-controller="bookings" data-action="click->bookings#reserved"> %>
+    <%= button_to "Book plant", bookings_path, class: "btn btn-primary"  %>
+    <%# </div> %>
     <%# <a href="#" class="btn btn-primary">Book plant</a> %>
   </div>
 </div>
