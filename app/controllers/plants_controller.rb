@@ -1,6 +1,7 @@
 class PlantsController < ApplicationController
+  # has_many_attached :photos
   before_action :set_plant, only: [:show]
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @plants = Plant.all

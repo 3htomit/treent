@@ -15,10 +15,16 @@
           <img src="<%= cl_image_path @plant.photos[0].key, height: 500, crop: :fill %>" class="d-block me-auto ms-auto" alt="Plant photo 1">
         </div>
         <div class="carousel-item">
+          <!--si PBM PHOTOS NILclass décommenter le ByPass-->
+          <%# if @plant.photos[1] != nil %>
           <img src="<%= cl_image_path @plant.photos[1].key, height: 500, crop: :fill %>" class="d-block me-auto ms-auto" alt="Plant photo 2">
+          <%# end %>
         </div>
         <div class="carousel-item">
-          <img src="<%= cl_image_path @plant.photos[2].key, height: 500, crop: :fill %>" class="d-block me-auto ms-auto" alt="Plant photo 3">
+        <!--si PBM PHOTOS NILclass décommenter le ByPass-->
+          <%# if @plant.photos[2] != nil %>
+            <img src="<%= cl_image_path @plant.photos[2].key, height: 500, crop: :fill %>" class="d-block me-auto ms-auto" alt="Plant photo 3">
+          <%# end %>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
