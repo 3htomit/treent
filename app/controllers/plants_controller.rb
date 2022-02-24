@@ -20,6 +20,7 @@ class PlantsController < ApplicationController
     @booking = Booking.new
   end
 
+
   private
 
   def set_plant
