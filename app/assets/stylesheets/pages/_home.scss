@@ -10,10 +10,18 @@
     margin: 0;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
     font-family: Lobster;
   }
+}
+
+.catchphrase {
+  color: white;
+  margin: 20px 0;
+  font-family: Quicksand;
+  font-size: 20px;
+
 }
 
 .banner h1 {
@@ -22,65 +30,133 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 80px;
   font-weight: bold;
-  font-family: 'EB Garamond';
+
 }
 
-.btn-ghost {
-  color: white;
-  border: 2px solid white;
-  padding: 10px 24px;
-  border-radius: 50px;
-  font-weight: bolder;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-  margin-top: 100px;
-  width: 200px;
+.btn-enter {
+  color: black;
+  background-color:  white;
+  border:solid 1px #886E76 ;
+  box-shadow: 1px 1px 1px;
+  padding: 5px;
+  border-radius: 7px;
+  opacity: 0,7;
+  width: 150px;
   height: 50px;
-  justify-content: center;
-  font-size: larger;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  opacity: 0.8;
+  margin-top: 10px;
 }
 
 .info_container {
   justify-content: space-around;
   // background-color: #FEFEFE;
   padding: 50px 50px;
-  background-color: #8BBD8B;
-
+  background-color: #F1F7E7;
 }
 
 
-.info_card {
+
+.info_card1 {
   width: 300px;
   height: 300px;
-  background-color: #FFFFFF;
+  background-image: url("bulle1.png");
+  background-size: cover;
+  background: opacity($color: white);
   text-align: center;
   border-radius: 50%;
   padding-top: 50px;
   // border: solid 6px rgba($color: #7C5A5D, $alpha: 0.9);
-  font-family: QUicksand;
+  font-family: Quicksand;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  margin: 20px;
+  p {
+    font-size: 20px;
+    color: white;
+  }
+
 }
 
+.info_card2 {
+  width: 300px;
+  height: 300px;
+  background-image:url("bulle2.png");
+  background-size: cover;
+  background: opacity($color: white);
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 50px;
+  // border: solid 6px rgba($color: #7C5A5D, $alpha: 0.9);
+  font-family: Quicksand;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  margin: 20px;
+  p {
+    font-size: 20px;
+    color: white;
+  }
+
+}
+.info_card3 {
+  width: 300px;
+  height: 300px;
+  background-image: url("bulle3.png");
+  background-size: cover;
+  background: opacity($color: white);
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 50px;
+  // border: solid 6px rgba($color: #7C5A5D, $alpha: 0.9);
+  font-family: Quicksand;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  margin: 20px;
+  p {
+    font-size: 20px;
+    color: white;
+  }
+
+}
 .suggestions_container {
   margin: 60px;
   // text-decoration: underline black;
   // font-weight: ;
-  width: 80%;
-  height: 800px;
-
-  h1 {
-    border-bottom: solid black 2px;
-    font-family: Quicksand;
-  }
+  width: 90%;
+  height: 600px;
+  background-color: #E7EFE9;
+  // border-radius: 7px;
+  border: solid #202705;
+  border-color: #202705;
+  float:left;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+  padding: 20px;
 }
 
+.suggestions-du-moment {
+  border-bottom: solid black 2px;
+  font-family: Quicksand;
+  margin-bottom: 50px;
+  padding-left: 20px;
+
+}
 .navbar-homepage {
   opacity: 0;
   transition: 1s background-color ease;
   background-color: transparent;
   position: fixed;
-
+  height: 50px;
   justify-content: space-between;
-
+  padding-top: 5px;
 }
 
 .navbar-show {
@@ -88,4 +164,8 @@
   background: white;
   justify-content: space-between;
 
+}
+
+.suggestions {
+  justify-content:space-around;
 }

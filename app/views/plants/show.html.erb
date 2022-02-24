@@ -43,16 +43,15 @@
     </div>
   </div>
 
-  <div class="container d-flex flex-column align-items-center justify-content-between p-5" id="booking">
-    <h2>Recap</h2>
-    <%= image_tag "dates_picker.png", width: 300 %>
-    <div class="container border border-primary pt-2 bg-light">
-      <h5 class="text-center"><strong><%= (@plant.day_price * 7).round(2) %> €</strong></h5>
-    </div>
-    <!-- data controller sur le bouton booking si j'ai besoin de l'info-->
-    <%# <div data-controller="bookings" data-action="click->bookings#reserved"> %>
-    <%= button_to "Book plant", bookings_path, class: "btn btn-primary"  %>
-    <%# </div> %>
-    <%# <a href="#" class="btn btn-primary">Book plant</a> %>
-  </div>
-</div>
+    <%= simple_form_for [ @plant, @booking ] do |f| %>
+      <div class="container d-flex flex-column align-items-center justify-content-between p-5" id="booking" data-controller="dates" data-dates-price-value="<%= @plant.day_price%>">
+        <h2>Recap</h2>
+        <%= f.input :dates, as: :string, required: false, input_html: {id: "range_start", data: {dates_target: "input", action: "change->dates#price"}} %>
+        <div class="d-flex booking-plant">
+          <div class="container booking-price border border-primary pt-2 bg-light m-3">
+            <h5 class="text-center" id="total-price"><strong data-dates-target="total"><%= number_with_precision(@plant.day_price, precision: 2) %></strong><strong> €</strong></h5>
+          </div>
+          <%= f.submit "Book plant", class: "btn btn-primary m-3" %>
+        </div>
+      </div>
+    <% end %>

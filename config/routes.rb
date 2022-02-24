@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   patch '/bookings/:id/decline', to: 'bookings#decline', as: :decline
 
   resources :my_plants, only: [:index, :new, :create, :edit, :update, :delete]
+
+
 end

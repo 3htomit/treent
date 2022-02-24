@@ -10,13 +10,16 @@ class PlantsController < ApplicationController
       {
         lat: plant.latitude,
         lng: plant.longitude,
-        # info_window: render_to_string(partial: "info_window", locals: { plant: plant })
+        info_window: render_to_string(partial: "info_window", locals: { plant: plant }),
+        image_url: helpers.asset_url("https://cdn1.iconfinder.com/data/icons/basic-ui-elements-coloricon/21/06_1-512.png")
       }
     end
   end
 
   def show
+    @booking = Booking.new
   end
+
 
   private
 

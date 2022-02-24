@@ -1,14 +1,14 @@
-<div class = "d-flex container justify-content-center mt-5 pt-5">
+<div class = "field-container d-flex container justify-content-center mt-5 pt-5">
   <%= simple_form_for @my_plant, url: my_plants_path do |f| %>
-    <div class = "input">
+    <div class ="field input">
       <%= f.input :name,
                   required: true %>
     </div>
-    <div class = "input">
+    <div class ="field input">
       <%= f.input :description,
                   required: true %>
     </div>
-    <div class = "input">
+    <div class ="field input">
       <%= f.input :day_price,
                   required: true %>
     </div>
