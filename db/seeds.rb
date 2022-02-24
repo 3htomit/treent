@@ -202,107 +202,107 @@ plant.save
 puts "#{i} plant create and save"
 i += 1
 
-plant = Plant.new(
-  name: "Orchidée Phalaeonopsis",
-  description: "
-  Caractéristiques principales
-  Hauteur à maturité (cm)
-  40
-  Feuillage
-  Persistant
-  Floraison
-  de Janvier à Décembre
-  Floraison parfumée
-  Non
-  Cette orchidée doit son nom à la ressemblance de ses fleurs avec la phalène : un papillon de nuit.
-  Truffaut conseille : Les hampes florales des grands Phalaenopsis ont tendance à plier sous le poids des fleurs. Plantez un tuteur au fond du pot et attachez le à plusieurs endroits sur la hampe
-  Truffaut informe : Il existe 50 espèces et plus de 5000 hybrides, dont la généalogie très complexe peut remonter sur plus de 10 générations. Les hybrides sont beaucoup plus faciles à cultiver en appartement que les formes botaniques. Phalaenopsis amabilis, à fleurs blanches et au labelle jaune et rose marqué de rouge. Phalaenopsis lueddemanniana, à fleurs cireuses, blanches et labelle rose pourpre. Phalaenopsis violacea, petit, parfumé, blanc, jaune et violet-pourpre, une merveille de délicatesse. Phalaenopsis equestris, à petites fleurs rose-pourpre, en grappes. Phalaenopsis miniata, aux fleurs jaunes tachetées de marron. Phalaenopsis stuartiana, aux fleurs blanches marquées de rouge
-  Plante méditerranéenne : Non
-  Port de la plante : Erigé
-  Feuillage : Persistant
-  Couleur du feuillage : Vert
-  Feuillage décoratif : Oui
-  Hauteur à maturité (cm) : 40
-  Dimension moyenne à maturité (cm) : H 40 cm
-  Lieu de vie : Plante d'intérieur
-  Exposition : Soleil
-  Hygrométrie : Moiteur - 60% d'humidité
-  Luminosité : Lumière vive sans soleil direct
-  Température mini-maxi recommandée : 14°C 24°C
-  Commentaire environnement de la plante : de 60% à 80%. Placez les pots sur un plateau contenant des graviers ou des billes d'argiles humides. Brumisez le feuillage tous les jours, en veillant que l'eau ne ruisselle pas jusqu'au cœur de la rosette (risque de pourriture)
-  Période de floraison : de Janvier à Décembre
-  Forme de la fleur : En coupe
-  Floraison parfumée : Non
-  Carte d'identité
-  Nom commun : Phaléno
-  Genre de la plante : Phalaenopsis
-  Espèce : Hybride
-  Famille : Orchidacées
-  Origine de l'espèce : Asie du Sud Est, Inde, Philippines et nord de l'Australie dans les forêts humides et denses, à base altitude (de 200 à 400)
-  Entretien
-  Périodicité d'arrosage
-  Février à septembre 2 fois par semaine,Octobre à janvier 1 fois par semaine
-  Commentaire arrosage
-  De préférence le matin, tous les 2 ou 3 jours en été, tous les 8 à 10 jours en hiver. Utilisez de l'eau plutôt tiede et non calcaire
-  Terreau conseillé
-  Mélange orchidée
-  Engrais conseillé
-  Engrais orchidées
-  Période d'apport engrais
-  De Mars à Septembre
-  Fréquence de rempotage
-  Tous les 2 à 3 ans
-  Période de rempotage
-  de Avril à Juin
-  Ennemis maladies et remèdes
-  Une attaque bactérienne d'Erwinia cypripedii provoque la pourriture molle. Divers champignons tachent les feuilles ou les fleurs (surtout le Botrytis). Traitez préventivement sans utiliser de produits en bombe qui sont mal tolérés. Utilisez toujours des outils très propres et assurez une bonne aération (sans courant d'air).",
-  day_price: 3.14,
-  user: User.second
-)
+# plant = Plant.new(
+#   name: "Orchidée Phalaeonopsis",
+#   description: "
+#   Caractéristiques principales
+#   Hauteur à maturité (cm)
+#   40
+#   Feuillage
+#   Persistant
+#   Floraison
+#   de Janvier à Décembre
+#   Floraison parfumée
+#   Non
+#   Cette orchidée doit son nom à la ressemblance de ses fleurs avec la phalène : un papillon de nuit.
+#   Truffaut conseille : Les hampes florales des grands Phalaenopsis ont tendance à plier sous le poids des fleurs. Plantez un tuteur au fond du pot et attachez le à plusieurs endroits sur la hampe
+#   Truffaut informe : Il existe 50 espèces et plus de 5000 hybrides, dont la généalogie très complexe peut remonter sur plus de 10 générations. Les hybrides sont beaucoup plus faciles à cultiver en appartement que les formes botaniques. Phalaenopsis amabilis, à fleurs blanches et au labelle jaune et rose marqué de rouge. Phalaenopsis lueddemanniana, à fleurs cireuses, blanches et labelle rose pourpre. Phalaenopsis violacea, petit, parfumé, blanc, jaune et violet-pourpre, une merveille de délicatesse. Phalaenopsis equestris, à petites fleurs rose-pourpre, en grappes. Phalaenopsis miniata, aux fleurs jaunes tachetées de marron. Phalaenopsis stuartiana, aux fleurs blanches marquées de rouge
+#   Plante méditerranéenne : Non
+#   Port de la plante : Erigé
+#   Feuillage : Persistant
+#   Couleur du feuillage : Vert
+#   Feuillage décoratif : Oui
+#   Hauteur à maturité (cm) : 40
+#   Dimension moyenne à maturité (cm) : H 40 cm
+#   Lieu de vie : Plante d'intérieur
+#   Exposition : Soleil
+#   Hygrométrie : Moiteur - 60% d'humidité
+#   Luminosité : Lumière vive sans soleil direct
+#   Température mini-maxi recommandée : 14°C 24°C
+#   Commentaire environnement de la plante : de 60% à 80%. Placez les pots sur un plateau contenant des graviers ou des billes d'argiles humides. Brumisez le feuillage tous les jours, en veillant que l'eau ne ruisselle pas jusqu'au cœur de la rosette (risque de pourriture)
+#   Période de floraison : de Janvier à Décembre
+#   Forme de la fleur : En coupe
+#   Floraison parfumée : Non
+#   Carte d'identité
+#   Nom commun : Phaléno
+#   Genre de la plante : Phalaenopsis
+#   Espèce : Hybride
+#   Famille : Orchidacées
+#   Origine de l'espèce : Asie du Sud Est, Inde, Philippines et nord de l'Australie dans les forêts humides et denses, à base altitude (de 200 à 400)
+#   Entretien
+#   Périodicité d'arrosage
+#   Février à septembre 2 fois par semaine,Octobre à janvier 1 fois par semaine
+#   Commentaire arrosage
+#   De préférence le matin, tous les 2 ou 3 jours en été, tous les 8 à 10 jours en hiver. Utilisez de l'eau plutôt tiede et non calcaire
+#   Terreau conseillé
+#   Mélange orchidée
+#   Engrais conseillé
+#   Engrais orchidées
+#   Période d'apport engrais
+#   De Mars à Septembre
+#   Fréquence de rempotage
+#   Tous les 2 à 3 ans
+#   Période de rempotage
+#   de Avril à Juin
+#   Ennemis maladies et remèdes
+#   Une attaque bactérienne d'Erwinia cypripedii provoque la pourriture molle. Divers champignons tachent les feuilles ou les fleurs (surtout le Botrytis). Traitez préventivement sans utiliser de produits en bombe qui sont mal tolérés. Utilisez toujours des outils très propres et assurez une bonne aération (sans courant d'air).",
+#   day_price: 3.14,
+#   user: User.second
+# )
 
-file = URI.open('https://images.unsplash.com/photo-1638047439096-55a186f4c2f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG9yY2hpZCVDMyVBOWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&h=500&q=60')
-plant.photos.attach(io: file, filename: "Orchidée Phalaeonopsis", content_type: 'image/png')
+# file = URI.open('https://images.unsplash.com/photo-1638047439096-55a186f4c2f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG9yY2hpZCVDMyVBOWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&h=500&q=60')
+# plant.photos.attach(io: file, filename: "Orchidée Phalaeonopsis", content_type: 'image/png')
 
-file = URI.open('https://images.unsplash.com/photo-1609670829795-baf901949092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG9yY2hpZCVDMyVBOWUlMjBwaGFsYWVvbm9wc2lzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=60')
-plant.photos.attach(io: file, filename: "focus Orchidée Phalaeonopsis", content_type: 'image/png')
-
-
-plant.save
-puts "#{i} plant create and save"
-i += 1
-
-plant = Plant.new(
-  name: "Azalée d'intérieur",
-  description: "Caractéristiques principales
-  Hauteur à maturité (cm)
-  40
-  Feuillage
-  Persistant
-  Floraison
-  de Janvier à Décembre
-  Floraison parfumée
-  Non
-  Mode de vie
-  Vivace
-  On dénombre une cinquantaine d'espèces et plus de 5000 hybrides, dont la généalogie très complexe peut remonter sur plus de 10 générations. Ces hybrides sont beaucoup plus faciles à cultiver en appartement. Les espèces réussiront mieux en serre, notamment Phalaenopsis amabilis, à fleurs blanches et au labelle jaune et rose marqué de rouge ; P. lueddemanniana, à fleurs cireuses, blanches et labelle rose pourpre ; P. violacea, petit, parfumé, blanc, jaune et violet-pourpre, une merveille de délicatesse
-  Truffaut conseille : Les hampes florales des grands Phalaenopsis ont tendance à plier sous le poids des fleurs. Plantez un tuteur au fond du pot et attachez le à plusieurs endroits sur la hampe
-  Truffaut informe : Attention, variétés et coloris peuvent changer selon disponibilités et arrivages.
-  Plante méditerranéenne : Non",
-  day_price: 2.36,
-  user: User.second
-)
+# file = URI.open('https://images.unsplash.com/photo-1609670829795-baf901949092?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG9yY2hpZCVDMyVBOWUlMjBwaGFsYWVvbm9wc2lzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=60')
+# plant.photos.attach(io: file, filename: "focus Orchidée Phalaeonopsis", content_type: 'image/png')
 
 
+# plant.save
+# puts "#{i} plant create and save"
+# i += 1
 
-  file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThL5NXekU7Xbn-yEQkJRkOSBJQT462HEs0KQ&usqp=CAU')
-  plant.photos.attach(io: file, filename: "Azalée d'intérieur", content_type: 'image/png')
+# plant = Plant.new(
+#   name: "Azalée d'intérieur",
+#   description: "Caractéristiques principales
+#   Hauteur à maturité (cm)
+#   40
+#   Feuillage
+#   Persistant
+#   Floraison
+#   de Janvier à Décembre
+#   Floraison parfumée
+#   Non
+#   Mode de vie
+#   Vivace
+#   On dénombre une cinquantaine d'espèces et plus de 5000 hybrides, dont la généalogie très complexe peut remonter sur plus de 10 générations. Ces hybrides sont beaucoup plus faciles à cultiver en appartement. Les espèces réussiront mieux en serre, notamment Phalaenopsis amabilis, à fleurs blanches et au labelle jaune et rose marqué de rouge ; P. lueddemanniana, à fleurs cireuses, blanches et labelle rose pourpre ; P. violacea, petit, parfumé, blanc, jaune et violet-pourpre, une merveille de délicatesse
+#   Truffaut conseille : Les hampes florales des grands Phalaenopsis ont tendance à plier sous le poids des fleurs. Plantez un tuteur au fond du pot et attachez le à plusieurs endroits sur la hampe
+#   Truffaut informe : Attention, variétés et coloris peuvent changer selon disponibilités et arrivages.
+#   Plante méditerranéenne : Non",
+#   day_price: 2.36,
+#   user: User.second
+# )
 
-  file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSii1-B1eglyQEASe93yqG-Fj9mSkl9MyFJ3Q&usqp=CAU')
-  plant.photos.attach(io: file, filename: "Azalée and cat", content_type: 'image/png')
 
-  plant.save
-  puts "#{i} plant create and save"
-  i += 1
+
+#   file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThL5NXekU7Xbn-yEQkJRkOSBJQT462HEs0KQ&usqp=CAU')
+#   plant.photos.attach(io: file, filename: "Azalée d'intérieur", content_type: 'image/png')
+
+#   file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSii1-B1eglyQEASe93yqG-Fj9mSkl9MyFJ3Q&usqp=CAU')
+#   plant.photos.attach(io: file, filename: "Azalée and cat", content_type: 'image/png')
+
+#   plant.save
+#   puts "#{i} plant create and save"
+#   i += 1
 
 
 ## TIM
