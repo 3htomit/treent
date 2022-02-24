@@ -1,25 +1,24 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpaperaccess.com/full/626933.jpg);">
 
     <h1 class="title">Treent</h1>
-    <button class="btn-ghost"><%= link_to "Hire a plant !", plants_path, method: :get %></button>
+    <%= button_to "Hire a plant", plants_path, method: :get, class: "btn-enter" %>
 
 </div>
 
-<div class="info_container d-flex">
-  <div class="info_card">
-    <%= image_tag("tree1.png") %>
-    <p>Besoin de plantes pour décorer <br> votre intérieur ?</p>
-  </div>
-  <div class="info_card">
-    <%= image_tag("tree2.png") %>
-    <p>Envie de partager votre collection à d'autres <br> treent-husiatstes ?</p>
-  </div>
-  <div class="info_card">
-    <%= image_tag("tree3.png") %>
-    <p>Un evenement en préparation ? <br> On vous couvre !</p>
+<div class="info_container d-grid">
+  <div class="row">
+    <div class="info_card col-sm-4 col-lg-12">
+      <p>Besoin de plantes pour décorer <br> votre intérieur ?</p>
+    </div>
+    <div class="info_card col-sm-4 col-lg-12">
+      <p>Envie de partager votre collection à d'autres <br> treent-husiatstes ?</p>
+    </div>
+    <div class="info_card col-sm-4 col-lg-12">
+      <p>Un evenement en préparation ? <br> On vous couvre !</p>
+    </div>
   </div>
 </div>
 
 <div class="suggestions_container">
-  <h1>Les plantes du moment 🍁</h1>
+  <h1>Les plantes du moment </h1>
 </div>
