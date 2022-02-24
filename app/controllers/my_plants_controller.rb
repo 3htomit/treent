@@ -10,8 +10,6 @@ class MyPlantsController < ApplicationController
     @user = current_user
     params[:plant][:user_id] = @user.id
     @my_plant = Plant.new(plant_params)
-    # raise
-    # @files = params[:plant][:photos]
 
     @my_plant.address = @user.address
 

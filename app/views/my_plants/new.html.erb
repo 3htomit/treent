@@ -12,9 +12,10 @@
       <%= f.input :day_price,
                   required: true %>
     </div>
-    <!-- rajouter la photo et un message d'erreur si possible -->
+    <!-- rajouter un message d'erreur si possible -->
     <%= f.input :photos,
                 as: :file,
+                required: true,
                 input_html: { multiple: true } %>
     <%= f.submit "new plant", class: "btn btn-primary" %>
   <% end %>
