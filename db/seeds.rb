@@ -145,7 +145,8 @@ plant = Plant.new(
   Carte d'identité
   Espèce : Elegans",
   day_price: 10,
-  user: User.first
+  user: User.first,
+  address: "Allée de la Comtesse-de-Ségur (75008) paris"
 )
 
 file = URI.open('https://images.unsplash.com/photo-1466298356323-f84bed7b3475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8Mjk3MjI0fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=60')
@@ -186,7 +187,8 @@ plant = Plant.new(
   Mode de vie : Vivace
   Origine de l'espèce : Afrique du Sud",
   day_price: 1.3,
-  user: User.first
+  user: User.first,
+  address: "Rue Entre Deux Murs, 33000 Bordeaux",
 )
 
 file = URI.open('https://images.unsplash.com/photo-1639627369574-28d7fde9fe68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGF3b3J0aGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=60')
@@ -425,6 +427,7 @@ plant2 = Plant.new(
   <strong>Type de sol :</strong> Normal, Sec",
   day_price: 4.2,
   user_id: user3.id,
+  address: "rue de la durantière 66000 st nazaire",
 )
 file21 = URI.open('https://images.unsplash.com/photo-1551839094-d9fecfdd60f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant2.photos.attach(io: file21, filename: 'cypress1.jpg', content_type: 'image/jpg')
@@ -475,6 +478,7 @@ plant3 = Plant.new(
   <strong>Année de l'obtention :</strong> 1994",
   day_price: 2.8,
   user_id: user3.id,
+  address: "Pornic"
 )
 file31 = URI.open('https://images.unsplash.com/photo-1535846660354-f998ee0797e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant3.photos.attach(io: file31, filename: 'rose_bush1.jpg', content_type: 'image/jpg')
@@ -506,6 +510,7 @@ plant4 = Plant.new(
   <strong>Type de sol :</strong> Frais",
   day_price: 8.8,
   user_id: user3.id,
+  address: "Guérande"
 )
 file41 = URI.open('https://images.unsplash.com/photo-1554067241-c7fade64cba7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fG1hZ25vbGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60')
 plant4.photos.attach(io: file41, filename: 'magnolia1.jpg', content_type: 'image/jpg')
@@ -526,6 +531,7 @@ plant5 = Plant.new(
   <strong>Plante méditerranéenne :</strong> Non",
   day_price: 3.3,
   user_id: user3.id,
+  address: "Angers"
 )
 file51 = URI.open('https://images.unsplash.com/photo-1534329706378-bc7be642fc8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant5.photos.attach(io: file51, filename: 'kumquat1.jpg', content_type: 'image/jpg')
@@ -569,6 +575,7 @@ plant6 = Plant.new(
   <strong>Floraison parfumée :</strong> Non",
   day_price: 1.1,
   user_id: user3.id,
+  address: "Saint Nazaire"
 )
 file61 = URI.open('https://images.unsplash.com/photo-1524366035278-86bff25a9ff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzc2lmbG9yYSUyMGNhZXJ1bGVhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 plant6.photos.attach(io: file61, filename: 'plantphoto1.jpg', content_type: 'image/jpg')
@@ -612,6 +619,7 @@ plant7 = Plant.new(
   <strong>Floraison parfumée :</strong> Non",
   day_price: 1.5,
   user_id: user3.id,
+  address: "Saint Nazaire"
 )
 file71 = URI.open('https://images.unsplash.com/photo-1594794741819-f3deb27a4a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant7.photos.attach(io: file71, filename: 'eucalyptus1.jpg', content_type: 'image/jpg')
@@ -634,6 +642,7 @@ plant8 = Plant.new(
   <strong>Plante méditerranéenne :</strong> Non",
   day_price: 12.9,
   user_id: user3.id,
+  address: "Nantes"
 )
 file81 = URI.open('https://images.unsplash.com/photo-1544475925-9199e8ed85ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant8.photos.attach(io: file81, filename: 'olive_tree1.jpg', content_type: 'image/jpg')
@@ -675,6 +684,7 @@ plant9 = Plant.new(
   <strong>Floraison parfumée :</strong> Non",
   day_price: 4.7,
   user_id: user3.id,
+  address: "rue de la durantière 66000 st nazaire",
 )
 file91 = URI.open('https://images.unsplash.com/photo-1565025968207-cf3123cd1e8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80')
 plant9.photos.attach(io: file91, filename: 'palm_tree1.jpg', content_type: 'image/jpg')
@@ -719,6 +729,7 @@ plant10 = Plant.new(
   <strong>Type de parfum :</strong> Floral",
   day_price: 3.2,
   user_id: user3.id,
+  address: "allée de beau rivage, 44000 nantes",
 )
 file101 = URI.open('https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80')
 plant10.photos.attach(io: file101, filename: 'lavender1.jpg', content_type: 'image/jpg')
