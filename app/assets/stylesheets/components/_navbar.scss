@@ -1,5 +1,5 @@
 .navbar {
-  height: 50px;
+  height: 70px;
   z-index: 99999;
 }
 
@@ -42,8 +42,13 @@
   border-radius: 5px;
   background-color: #046243;
   color: white;
+  &:hover {
+    background-color: #023524;
+    color:white ;
+  }
 }
 
-.nav-link {
+.nav-link{
   color: #046243;
+  &:hover {color: #046243 }
 }
