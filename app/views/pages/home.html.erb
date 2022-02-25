@@ -20,12 +20,12 @@
   </div>
 </div>
 
-<div class="suggestions_container">
+<div class="suggestions_container bg-white">
   <h1 class="suggestions-du-moment">Daily inspiration</h1>
 
   <div class="suggestions d-flex">
    <% @plants.each do |plant| %>
-      <%= render 'components/card', plant: plant %>
+      <%= render 'components/suggestion', plant: plant %>
     <% end %>
   </div>
 </div>
