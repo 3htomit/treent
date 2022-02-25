@@ -2,6 +2,7 @@
   <%= simple_form_for @my_plant, url: my_plants_path do |f| %>
     <div class ="field input">
       <%= f.input :name,
+                  label: 'Nom de la plante',
                   required: true %>
     </div>
     <div class ="field input">
@@ -10,21 +11,25 @@
     </div>
     <div class ="field input">
       <%= f.input :day_price,
+                  label: 'Prix par jour',
                   required: true %>
     </div>
     <!-- rajouter un message d'erreur si possible -->
     <%= f.input :photos,
+                label: 'Photo 1',
                 as: :file,
                 required: true,
                 input_html: { multiple: true } %>
     <%= f.input :photos,
+                label: 'Photo 2',
                 as: :file,
                 required: true,
                 input_html: { multiple: true } %>
     <%= f.input :photos,
+                label: 'Photo 3',
                 as: :file,
                 required: true,
                 input_html: { multiple: true } %>
-    <%= f.submit "new plant", class: "btn btn-primary" %>
+    <%= f.submit "Ajouter la plante", class: "btn btn-primary" %>
   <% end %>
 </div>
