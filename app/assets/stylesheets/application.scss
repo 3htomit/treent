@@ -21,15 +21,7 @@
 
 a {
   text-decoration: none;
-  color: darkslategrey;
 }
-
-a:hover {
-  text-decoration: none;
-  color: green;
-}
-
-/*Media Queries*/
 
 /*Smallest device*/
 @media (min-width: 100px) and (max-width: 575px) {
