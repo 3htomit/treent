@@ -3,7 +3,7 @@
 <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Bookings</button>
 <button class="tablink" onclick="openPage('News', this, 'green')">My Plants</button> %>
 
-<div data-controller="bookings" class="mt-5">
+<div data-controller="bookings">
   <div class="tab__container">
     <button class="bookings tab">bookings</button>
     <button class="plants tab">My Plants</button>
@@ -11,21 +11,52 @@
 
   <div id="bookings" class="tab_content active">
 
-    <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
-      Pending Bookings
-    </button>
-    <div class="collapse" id="collapsePending">
-      <ul class="booking-list">
-        <% Booking.all.each do |booking|%>
-          <!-- j'affiche tous les bookings -->
 
-          <% if booking.dates[0] > Date.today.to_s %>
-            <!-- si la date de demande est supérieur a la date du jour-->
+      <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
+        Pending Bookings
+      </button>
+      <div class="collapse" id="collapsePending">
+        <ul class="booking-list">
+          <% Booking.all.each do |booking|%>
+            <!-- j'affiche tous les bookings -->
 
 
-            <!--j'affiche les plantes du proprio courant-->
-            <% current_user.plants.each do |plant| %>
-              <% if plant.id == booking.plant_id %>
+            <% if booking.dates[0] > Date.today.to_s %>
+              <!-- si la date de demande est supérieur a la date du jour-->
+
+
+                <div class="card-image d-flex flex-row ">
+                  <div>
+                    <% if Plant.find(booking.plant_id).photos.attached? %>
+                      <%= cl_image_tag Plant.find(booking.plant_id).photos.first.key, height: 150, width: 200, crop: :fill, class: "border-photo" %>
+                    <% end %>
+                  </div>
+                  <div class="plant-name-card">
+                    <h2 ><%= Plant.find(booking.plant_id).name %></h2>
+                  </div>
+                </div>
+
+
+                <!-- if @status == true (du bookings controller) afficher pastille vert-->
+                <div class="d-flex action-user">
+                  <div class="status-icon">
+                    <% if booking.status == true %>
+                      <p>🟢</p>
+                    <% else %>
+                      <p>🔴</p>
+                    <%end%>
+                  </div>
+                  <div class="delete-icon">
+                    <%= link_to "", decline_path(booking), method: :patch, remote: true,  class: "fas fa-trash"%>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+              <!--j'affiche les plantes du proprio courant-->
+              <% current_user.plants.each do |plant| %>
+                <% if plant.id == booking.plant_id %>
+
 
                 <li>
                   <div class=" d-flex justify-content-between card-product">
@@ -59,37 +90,13 @@
               <%end%>
 
 
-              <!-- tous les bookings de l'utilisateur -->
-              <% current_user.bookings.each do |booking|%>
-                <% if current_user != User.find(Plant.find(booking.plant_id).user_id) %>
-                  <li>
-                    <div class=" d-flex justify-content-between card-product">
 
-                      <div class="card-image d-flex flex-row ">
-                        <div>
-                          <% if Plant.find(booking.plant_id).photos.attached? %>
-                            <%= cl_image_tag Plant.find(booking.plant_id).photos.first.key, height: 150, width: 200, crop: :fill, class: "border-photo" %>
-                          <% end %>
-                        </div>
-                        <div class = "mt-4 ml-2">
-                          <h2 ><%= Plant.find(booking.plant_id).name %></h2>
-                        </div>
-                      </div>
-
-                      <!-- if @status == true (du bookings controller) afficher pastille vert-->
-                      <div>
-                        <% if booking.status == true %>
-                          <p>🟢</p>
-                        <% else %>
-                          <p>🔴</p>
-                        <%end%>
-
-                        <%= link_to "🗑️", decline_path(booking), method: :patch, class: "delete"%>
-                      </div>
-                    </div>
-                  </li>
-                <%end%>
               <%end%>
+
+
+
+
+
             <%end%>
           <%end%>
         <%end%>
@@ -98,7 +105,8 @@
 
 
 
-    <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOngoing" aria-expanded="false" aria-controls="collapseExample">
+
+   <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOngoing" aria-expanded="false" aria-controls="collapseExample">
       Ongoing
     </button>
 
@@ -158,7 +166,7 @@
 
 
 
-    <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory" aria-expanded="false" aria-controls="collapseExample">
+    <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory" aria-expanded="false" aria-controls="collapseExample">
       History
     </button>
     <div class="collapse" id="collapseHistory">

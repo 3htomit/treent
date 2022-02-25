@@ -6,27 +6,42 @@
   display: flex;
   align-items: center;
   margin:15px 0;
+  padding-right: 30px;
+  border-radius: 5px;
 
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.card-product {
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
 }
 
-.card-product h2 {
+
+.card-product {
+  h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-top: 35px;
+  margin-left: 10px;
+  }
 }
 
-.card-product p {
+.card-product {
+  .plant-name-card {
+
+  }
+}
+.card-product {
+  p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  }
 }
 
 .card-product .card-product-infos {
@@ -37,4 +52,17 @@ li {
   display:inline-block;
   text-align: center;
   width: 80%;
+}
+
+.action-user {
+  justify-content: space-between;
+  width: 70px;
+}
+
+.status-icon{
+  margin-top: 5px;
+}
+
+.delete-icon {
+
 }
