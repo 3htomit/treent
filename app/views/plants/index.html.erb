@@ -1,28 +1,27 @@
 <h1 class="title-plants-index">Plants</h1>
 <div class="search-bar">
-
-      <%= form_tag plants_path, class: "d-flex", method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control m-1",
-          placeholder: "Find a plant"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary m-1" %>
-      <% end %>
+  <%= form_tag plants_path, class: "d-flex", method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control m-1",
+      placeholder: "Find a plant"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary m-1" %>
+  <% end %>
 </div>
 
-
-
-
-<div class="main-container">
-  <div class="cards">
-    <% @plants.each do |plant| %>
-      <%= render 'components/card', plant: plant %>
-    <% end %>
-  </div>
-  <div class="mapboxgl-map"
-    data-controller="mapbox"
-    data-mapbox-markers-value="<%= @markers.to_json %>"
-    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="mx-5">
+  <h1 class="title-plants-index">Plants</h1>
+  <div class="main-container ">
+    <div class="cards">
+      <% @plants.each do |plant| %>
+        <%= render 'components/card', plant: plant %>
+      <% end %>
+    </div>
+    <div class="mapboxgl-map"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
