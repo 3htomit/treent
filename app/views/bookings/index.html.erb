@@ -5,15 +5,15 @@
 
 <div data-controller="bookings">
   <div class="tab__container">
-    <button class="bookings tab">bookings</button>
-    <button class="plants tab">My Plants</button>
+    <button class="bookings tab">RESERVATIONS</button>
+    <button class="plants tab">MES PLANTES</button>
   </div>
 
   <div id="bookings" class="tab_content active">
 
 
     <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
-      Pending Bookings
+      Réservations en attente
     </button>
     <div class="collapse" id="collapsePending">
       <ul class="booking-list">
@@ -118,7 +118,7 @@
 
 
    <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOngoing" aria-expanded="false" aria-controls="collapseExample">
-      Ongoing
+      En cours
     </button>
 
     <div class="collapse" id="collapseOngoing">
@@ -181,7 +181,7 @@
 
 
     <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory" aria-expanded="false" aria-controls="collapseExample">
-      History
+      Historique
     </button>
     <div class="collapse" id="collapseHistory">
       <% current_user.bookings.each do |booking|%>
