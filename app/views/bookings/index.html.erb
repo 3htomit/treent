@@ -60,12 +60,9 @@
             </li>
 
 
-
             <!--j'affiche les plantes du proprio courant-->
             <% current_user.plants.each do |plant| %>
               <% if plant.id == booking.plant_id %>
-
-
                 <li>
                   <div class=" d-flex justify-content-between card-product">
 
