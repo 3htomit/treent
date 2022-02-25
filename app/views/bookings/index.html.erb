@@ -12,19 +12,20 @@
   <div id="bookings" class="tab_content active">
 
 
-      <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
-        Pending Bookings
-      </button>
-      <div class="collapse" id="collapsePending">
-        <ul class="booking-list">
-          <% Booking.all.each do |booking|%>
-            <!-- j'affiche tous les bookings -->
+    <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
+      Pending Bookings
+    </button>
+    <div class="collapse" id="collapsePending">
+      <ul class="booking-list">
+        <% Booking.all.each do |booking|%>
+          <!-- j'affiche tous les bookings -->
 
 
-            <% if booking.dates[0] > Date.today.to_s %>
-              <!-- si la date de demande est supérieur a la date du jour-->
+          <% if booking.dates[0] > Date.today.to_s %>
+            <!-- si la date de demande est supérieur a la date du jour-->
 
-
+            <li>
+               <div class=" d-flex justify-content-between card-product">
                 <div class="card-image d-flex flex-row ">
                   <div>
                     <% if Plant.find(booking.plant_id).photos.attached? %>
@@ -34,16 +35,21 @@
                   <div class="plant-name-card">
                     <h2 ><%= Plant.find(booking.plant_id).name %></h2>
                   </div>
+                   <div class="booking-date">
+                    <h3><i><%= booking.dates[0] %> <%= booking.dates[1] %></i></h3>
+                  </div>
                 </div>
 
 
                 <!-- if @status == true (du bookings controller) afficher pastille vert-->
                 <div class="d-flex action-user">
                   <div class="status-icon">
-                    <% if booking.status == true %>
-                      <p>🟢</p>
-                    <% else %>
-                      <p>🔴</p>
+                    <% if current_user != User.find(Plant.find(booking.plant_id).user_id) %>
+                      <% if booking.status == true %>
+                        <p>🟢</p>
+                      <% else %>
+                        <p>🔴</p>
+                      <%end%>
                     <%end%>
                   </div>
                   <div class="delete-icon">
@@ -51,11 +57,13 @@
                   </div>
                 </div>
               </div>
-
             </li>
-              <!--j'affiche les plantes du proprio courant-->
-              <% current_user.plants.each do |plant| %>
-                <% if plant.id == booking.plant_id %>
+
+
+
+            <!--j'affiche les plantes du proprio courant-->
+            <% current_user.plants.each do |plant| %>
+              <% if plant.id == booking.plant_id %>
 
 
                 <li>
@@ -71,6 +79,9 @@
                       <div class = "mt-4 ml-2">
                         <h2 ><%= Plant.find(booking.plant_id).name %></h2>
                       </div>
+                         <div class="booking-date">
+                            <h3><i><%= booking.dates[0] %> <%= booking.dates[1] %></i></h3>
+                          </div>
                     </div>
 
                     <!-- if @status == true (du bookings controller) afficher pastille vert-->
@@ -83,22 +94,22 @@
                           <%= link_to "🔴", accept_path(booking), method: :patch, class: "reserved"%>
                         <%end%>
                       <%end%>
-                      <%= link_to "🗑️", decline_path(booking), method: :patch, class: "delete"%>
+                      <%= link_to "", decline_path(booking), method: :patch, remote: true,  class: "fas fa-trash"%>
                     </div>
                   </div>
                 </li>
               <%end%>
 
-
-
-              <%end%>
-
-
-
-
-
             <%end%>
+
+
+
+
+
+
+
           <%end%>
+
         <%end%>
       </ul>
     </div>
@@ -128,6 +139,9 @@
                   <div class = "mt-4 ml-2">
                     <h2 ><%= Plant.find(booking.plant_id).name %></h2>
                   </div>
+                    <div class="booking-date">
+                      <h3><i><%= booking.dates[0] %> <%= booking.dates[1] %></i></h3>
+                    </div>
                 </div>
 
                 <!-- if @status == true (du bookings controller) afficher pastille vert-->
