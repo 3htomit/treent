@@ -12,17 +12,68 @@
 .p-plants-index {
   position: absolute;
   bottom: 1px;
-  color: #0B4619;
+  color: #191919;
   font-family: 'Quicksand', sans-serif;
   font-weight: bolder;
 }
 
 .card-title-plants-index {
   font-size: 20px;
-  color: #0B4619;
+  color: #191919;
   font-family: 'Quicksand', sans-serif;
 }
 
 .border-photo {
   border-radius: 5px 5px 0 0;
+}
+
+.suggestions_container {
+  margin: 60px;
+  // text-decoration: underline black;
+  // font-weight: ;
+  width: 90%;
+  height: 600px;
+  background-color: #E7EFE9;
+  // border-radius: 7px;
+  color: rgb(50, 50, 50);
+  border: solid rgb(50, 50, 50);
+  border-color: rgb(50, 50, 50);
+  float:left;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  padding: 20px;
+  .suggestions-du-moment {
+    border-bottom: solid black 2px;
+    font-family: Quicksand;
+    margin-bottom: 50px;
+    padding-left: 20px;
+  }
+}
+
+
+.suggestions {
+  justify-content:space-around;
+  a {
+    color: rgb(50, 50, 50);
+    font-size: 18px;
+    &:hover {
+      color: rgb(50, 50, 50);
+    }
+  }
+  .suggestion-card {
+    // display: flex;
+    justify-content: space-around;
+    margin: 0 15px 20px 0;
+    width: 300px;
+    // height: 400px;
+    text-align: left;
+    .suggestion-photo {
+      border-radius: 1rem;
+      box-shadow: 0.5rem 0.5rem 1rem lightgray;
+    }
+    .suggestion-caption {
+      margin: 1rem 0;
+      text-align: center;
+    }
+  }
 }

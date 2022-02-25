@@ -4,7 +4,11 @@ class PlantsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @plants = Plant.all
+    if params[:query].present?
+      @plants = Plant.search_by_name_and_address(params[:query])
+    else
+      @plants = Plant.all
+    end
 
     @markers = @plants.geocoded.map do |plant|
       {
