@@ -13,6 +13,7 @@
     font-size: 100px;
     font-weight: bold;
     font-family: Lobster;
+    text-shadow: 2px 2px 2px black;
   }
 }
 
@@ -21,7 +22,7 @@
   margin: 20px 0;
   font-family: Quicksand;
   font-size: 20px;
-
+  text-shadow: 2px 2px 2px black;
 }
 
 .banner h1 {
@@ -47,6 +48,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   opacity: 0.8;
   margin-top: 10px;
+
 }
 
 .info_container {
@@ -77,6 +79,8 @@
   p {
     font-size: 20px;
     color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 4px black;
   }
 
 }
@@ -100,6 +104,8 @@
   p {
     font-size: 20px;
     color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 4px black;
   }
 
 }
@@ -122,12 +128,14 @@
   p {
     font-size: 20px;
     color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 4px black;
   }
 
 }
 .suggestions_container {
   margin: 60px;
- 
+
   width: 90%;
   height: 600px;
   background-color: #E7EFE9;

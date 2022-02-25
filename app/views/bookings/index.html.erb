@@ -3,7 +3,7 @@
 <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Bookings</button>
 <button class="tablink" onclick="openPage('News', this, 'green')">My Plants</button> %>
 
-<div data-controller="bookings" class="mt-5">
+<div data-controller="bookings">
   <div class="tab__container">
     <button class="bookings tab">bookings</button>
     <button class="plants tab">My Plants</button>
@@ -11,7 +11,7 @@
 
   <div id="bookings" class="tab_content active">
 
-      <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
+      <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePending" aria-expanded="false" aria-controls="collapseExample">
         Pending Bookings
       </button>
       <div class="collapse" id="collapsePending">
@@ -27,22 +27,27 @@
                       <%= cl_image_tag Plant.find(booking.plant_id).photos.first.key, height: 150, width: 200, crop: :fill, class: "border-photo" %>
                     <% end %>
                   </div>
-                  <div class = "mt-4 ml-2">
+                  <div class="plant-name-card">
                     <h2 ><%= Plant.find(booking.plant_id).name %></h2>
                   </div>
                 </div>
 
-                <!-- if @status == true (du bookings controller) afficher pastille vert-->
-                <div>
-                  <% if booking.status == true %>
-                    <p>🟢</p>
-                  <% else %>
-                    <p>🔴</p>
-                  <%end%>
 
-                  <%= link_to "🗑️", decline_path(booking), method: :patch, class: "delete"%>
+                <!-- if @status == true (du bookings controller) afficher pastille vert-->
+                <div class="d-flex action-user">
+                  <div class="status-icon">
+                    <% if booking.status == true %>
+                      <p>🟢</p>
+                    <% else %>
+                      <p>🔴</p>
+                    <%end%>
+                  </div>
+                  <div class="delete-icon">
+                    <%= link_to "", decline_path(booking), method: :patch, remote: true,  class: "fas fa-trash"%>
+                  </div>
                 </div>
               </div>
+
             </li>
           <% end %>
         </ul>
@@ -51,7 +56,7 @@
 
 
 
-      <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOngoing" aria-expanded="false" aria-controls="collapseExample">
+      <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOngoing" aria-expanded="false" aria-controls="collapseExample">
         Ongoing
       </button>
 
@@ -94,7 +99,7 @@
           <% end %>
         </ul>
       </div>
-      <button class="btn mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory" aria-expanded="false" aria-controls="collapseExample">
+      <button class="booking-button mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory" aria-expanded="false" aria-controls="collapseExample">
         History
       </button>
       <div class="collapse" id="collapseHistory">
