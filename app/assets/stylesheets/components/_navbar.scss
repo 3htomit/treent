@@ -17,7 +17,7 @@
   flex-grow: 0;
   height: 50px;
   justify-content: space-between;
-  width: 160px;
+  // width: 160px;
   z-index: 99999;
 }
 
@@ -31,21 +31,6 @@
   width: 100%;
   z-index: 10;
   align-items: center;
-}
-
-.navbar-button {
-  width:  100px !important;
-  background-color: white;
-  font-size: 15px;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #046243;
-  color: white;
-  &:hover {
-    background-color: #023524;
-    color:white ;
-  }
 }
 
 .nav-link{
