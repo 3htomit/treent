@@ -1,4 +1,4 @@
-<%# <div class="container-fluid" id="navbar"> %>
+<div class="container-fluid mx-5" id="navbar">
   <h2><%= link_to "Treent", root_path, class: "nav-link" %></h2>
   <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,18 +7,20 @@
     <%# <ul class="navbar-nav me-auto"> %>
       <% if user_signed_in? %>
 
-        <div><%= link_to "New Plant", new_my_plant_path, class: "navbar-button"%></div>
+        <div><%= link_to "Ajouter une plante", new_my_plant_path, class: "light-btn"%></div>
         <%# <li class="nav-item dropdown"> %>
           <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+
+            <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             <%= link_to "Dashboard", bookings_path, class: "dropdown-item" %>
 
           </div>
         <%# </li> %>
       <% else %>
         <!--li class="nav-item"-->
-          <%= link_to "Login", new_user_session_path, class:  "navbar-button" %>
+          <%= link_to "Connexion", new_user_session_path, class:  "navbar-button" %>
+
         <!--/li-->
       <% end %>
   </div>

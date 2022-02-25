@@ -1,5 +1,5 @@
-<div class="top-margin container">
-  <%= link_to "Back to plants", plants_path %>
+<div class="vertical-margin mx-5">
+  <%= link_to "Retour aux plantes", plants_path, class: "light-btn" %>
 </div>
 
 <div class="main-container mx-5 d-flex">
@@ -37,7 +37,7 @@
       </button>
     </div>
 
-    <div class="container text-start">
+    <div class="container text-start mt-5">
       <h1><%= @plant.name %></h1>
       <p><%= simple_format(@plant.description) %></p>
     </div>
@@ -45,13 +45,13 @@
 
     <%= simple_form_for [ @plant, @booking ] do |f| %>
       <div class="container d-flex flex-column align-items-center justify-content-between p-5" id="booking" data-controller="dates" data-dates-price-value="<%= @plant.day_price%>">
-        <h2>Recap</h2>
+        <h2>Récapitulatif</h2>
         <%= f.input :dates, as: :string, required: false, input_html: {id: "range_start", data: {dates_target: "input", action: "change->dates#price"}} %>
         <div class="d-flex booking-plant">
-          <div class="container booking-price border border-primary pt-2 bg-light m-3">
-            <h5 class="text-center" id="total-price"><strong data-dates-target="total"><%= number_with_precision(@plant.day_price, precision: 2) %></strong><strong> €</strong></h5>
+          <div class="container booking-price m-3">
+            <p class="text-center " id="total-price"><strong data-dates-target="total"><%= number_with_precision(@plant.day_price, precision: 2) %></strong><strong> €</strong></p>
           </div>
-          <%= f.submit "Book plant", class: "btn btn-primary m-3" %>
+          <%= f.submit "Réserver", class: "button m-3" %>
         </div>
       </div>
     <% end %>
