@@ -1,3 +1,15 @@
+<h1 class="title-plants-index">Plants</h1>
+<div class="search-bar">
+  <%= form_tag plants_path, class: "d-flex", method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control m-1",
+      placeholder: "Find a plant"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary m-1" %>
+  <% end %>
+</div>
+
 <div class="mx-5">
   <h1 class="title-plants-index">Plants</h1>
   <div class="main-container ">
