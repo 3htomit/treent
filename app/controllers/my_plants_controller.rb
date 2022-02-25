@@ -5,12 +5,12 @@ class MyPlantsController < ApplicationController
   end
 
   def create
-    # i take the current user and put in params.require
-    # params[:plant][:user_id] = current_user.id
+    # params[:plant][:user_id] = current_user.id = @my_plant.user = @user
     @user = current_user
-    params[:plant][:user_id] = @user.id
+
     @my_plant = Plant.new(plant_params)
 
+    @my_plant.user = @user
     @my_plant.address = @user.address
 
     if @my_plant.save
